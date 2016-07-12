@@ -8,20 +8,20 @@
 int A[16]={0,1,4,5,7,8,9,10,12,15,22,23,27,32,35};//测试用数组 
 int main()
 {
-	int n=16;
+	int sum=16;
 	int low=1;		//查询数组的起点 
-	int high=n-1;	//查询数组的终点 
+	int high=sum-1;	//查询数组的终点 
 	int j=0;		//查询数组的结果 
 	int mid;		//中间元素 
-	int x=15;		//需要查询的值 
+	int search=15;		//需要查询的值 
 	while(low <=high && j==0)
 	{
 		mid=(low+high)/2;
-		if(x==A[mid])
+		if(search==A[mid])
 		{
 			j=mid;
 		}
-		else if(x<A[mid])
+		else if(search<A[mid])
 		{
 			high = mid-1;
 		}
